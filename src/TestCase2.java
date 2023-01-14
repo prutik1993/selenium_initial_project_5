@@ -39,6 +39,7 @@ public class TestCase2 {
         for (int i = 0; i < headerItems.size(); i++) {
             System.out.println(headerItems.get(i).isDisplayed() ? "Display is PASSED" :"Display is FAILED");
             System.out.println(headerItems.get(i).isEnabled() ? "Enable is PASSED" :"Enable is FAILED");
+            System.out.println(headerItems.get(i).getText());
             System.out.println(headerItems.get(i).getText().trim().equals(headerItemsNames[i]) ?
                     "Text is PASSED" :"Text is FAILED");
             System.out.println("-----------------------");

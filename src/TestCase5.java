@@ -21,27 +21,16 @@ public class TestCase5 {
 
         WebDriver driver = Driver.getDriver();
 
+        driver.navigate().to("https://automationexercise.com/");
 
-       driver.navigate().to("https://automationexercise.com/");
-
-
-        driver.findElement(By.xpath("((//ul/li)[5]")).click();
+        driver.findElement(By.xpath("(//ul/li)[5]")).click();
         Waiter.pause(1);
 
+        driver.getCurrentUrl();
+        driver.getTitle();
 
         Driver.quitDriver();
 
-        //        driver.findElement(By.id("dismiss-button"));
-//        Waiter.pause(2);
 
-//        WebElement actionBtn=driver.findElement(By.id("dismiss-button"));
-//        act.doubleClick(actionBtn).perform();
-//        Waiter.pause(2);
-
-        //System.out.println();
-
-
-
-        //Driver.quitDriver();
     }
 }
