@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import util.AutomationExercise;
 import util.Driver;
 
 public class TestCase4 {
@@ -10,9 +11,7 @@ public class TestCase4 {
         Then user should see “Copyright © 2021 All rights reserved” text in the footer
         */
 
-        WebDriver driver = Driver.getDriver();
-
-        driver.get("https://automationexercise.com/");
+        WebDriver driver = AutomationExercise.getHomePage();
 
         System.out.println(driver.findElement(By.cssSelector(".footer-bottom p")).isDisplayed() ?
                 "Footer is PASSED" : "Footer is FAILED" );

@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import util.AutomationExercise;
 import util.Driver;
 
 public class TestCase1 {
@@ -10,12 +11,12 @@ public class TestCase1 {
         Then user should see logo on top-left
          */
 
-        WebDriver driver = Driver.getDriver();
+        WebDriver driver = AutomationExercise.getHomePage();
 
-        driver.get("https://automationexercise.com/");
+
 
         System.out.println(driver.findElement(By.cssSelector("img[src='/static/images/home/logo.png']")).isDisplayed() ?
-                "Logo is PASSED" : "Logo if FAILED");
+                "Logo is PASSED" : "Logo if FAILED"); // By.cssSelector(".logo img")
 
         System.out.println(driver.findElement(By.xpath("//div[@class='logo pull-left']//img")).isDisplayed() ?
                 "Logo is PASSED" : "Logo if FAILED");

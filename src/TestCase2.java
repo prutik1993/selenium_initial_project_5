@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import util.AutomationExercise;
 import util.Driver;
 
 import java.util.List;
@@ -21,11 +22,11 @@ public class TestCase2 {
         Contact us
         */
 
-        WebDriver driver = Driver.getDriver();
+        WebDriver driver = AutomationExercise.getHomePage();
 
-        driver.get("https://automationexercise.com/");
 
-        List<WebElement> headerItems = driver.findElements(By.cssSelector(".navbar-nav>li"));
+
+        List<WebElement> headerItems = driver.findElements(By.cssSelector(".navbar-nav>li")); // By.cssSelector(#header li)
         String[] headerItemsNames = {
                 "Home",
                 "Products",
@@ -41,7 +42,8 @@ public class TestCase2 {
             System.out.println(headerItems.get(i).isEnabled() ? "Enable is PASSED" :"Enable is FAILED");
             System.out.println(headerItems.get(i).getText());
             System.out.println(headerItems.get(i).getText().trim().equals(headerItemsNames[i]) ?
-                    "Text is PASSED" :"Text is FAILED");
+                    "Text is PASSED" :"Text is FAILED"); // we can use contains() here to make it pass it
+
             System.out.println("-----------------------");
         }
         Driver.quitDriver();
