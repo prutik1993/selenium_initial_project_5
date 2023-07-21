@@ -21,6 +21,8 @@ public class TestCase1 {
         System.out.println(driver.findElement(By.xpath("//div[@class='logo pull-left']//img")).isDisplayed() ?
                 "Logo is PASSED" : "Logo if FAILED");
 
+        
+
         Driver.quitDriver();
     }
 }
